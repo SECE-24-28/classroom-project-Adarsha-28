@@ -1,0 +1,104 @@
+/*1.Universal selector*/
+/* *{
+    border:1px solid red;
+} */
+
+
+/*tag selector */
+h1{
+    background-color:green;
+}
+
+/*id Selector */
+#b{
+    color:red;
+    background-color: yellow;
+}
+
+/*class selector */
+.b{
+    /*color:blue */
+    border:10 px solid;
+}
+
+/*Group selector*/
+/*when you are selecting multiple tags without class selector */
+h1,
+h2{
+    color:blueviolet;
+}
+
+/*descendent selector*/
+div p{
+    color:red;
+    background-color: yellow;
+    
+}
+
+/*child selector*/
+div >p{
+    color:green;
+    background-color: blue;
+}
+
+/*attribute selector */
+button[type="submit"]{
+    color:red;
+    font-size:32px;
+}
+
+
+/* pesudo classes */
+li:nth-child(2){
+    color: red;
+    font-size: 24px;
+}
+
+/* li:nth-child(2):hover{
+    color: yellow;
+    font-size: 38px;
+} */
+
+li:hover{
+    color: yellow;
+    background-color: red;
+    font-size: 38px;
+}
+
+/* pesudo elements */
+#r::before{
+    content: "written by css";
+}
+
+.b::first-letter{
+    font-size: 48px;
+    color: red;
+}
+
+#q{
+    display: block;
+}
+ 
+#q::first-letter{
+    font-size: 48px;
+    color: red;
+}
+
+#q::first-line{
+    color: yellow;
+    font-size: 32px;
+}
+
+
+/* *{
+    padding:0;
+    margin: 0;
+} */
+/* Box model */
+h1:nth-child(1){
+    border: 3px solid red;
+    /* padding: 30px; */
+    /* padding: 10px 20px 40px 60px; => clockwise */
+    padding: 20px 40px;
+    margin: 80px;
+}
