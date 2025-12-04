@@ -1,0 +1,46 @@
+.flexContainer{
+    border: 1px solid red;
+    display: flex;
+    height: 90vh;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 1px;
+    /* flex-direction: column-reverse; */
+    /* justify-content: flex-end;
+    align-items: flex-end; */
+
+    flex-wrap: wrap;
+    /*default nowrap, values: nowrap,wrap,wrap-reverse*/
+    /* align-content: flex-start; 111*/ 
+}
+
+.flexItem{
+    background-color: yellow;
+    border: 2px solid red;
+    color: red;
+    font-size: 24px;
+    height:80px;
+    width: 100px
+}
+
+/* Values of flex direction
+Row, row-reverse, column, column-reverse */
+
+/* Values of align-items
+flex-start, flex-end, baseline, center */
+/* 
+Values of justify-content
+flex-start,center,spac-around,space-between,space-evenly */
+
+
+.flexItem:nth-child(1){
+    order:1; 
+    /* default all order value as 0 for order , to place at end use greater value from 0, at beginning use negative value*/
+    align-self: center; 
+    /* for specific ele 222*/
+}
+
+.flexItem:nth-child(6){
+    order:-1; 
+    align-self: flex-end; 
+}
