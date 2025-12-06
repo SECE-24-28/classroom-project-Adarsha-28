@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #feedbackForm{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            justify-content: center;
+            width:350px;
+            height: 300px;
+            margin: auto;
+            background: rgb(242, 240, 240);
+            padding: 10px 15px;
+            gap: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        } 
+        h2{
+          text-align: center;
+        }
+        #feedback,#name,#course{
+          height: 30px;
+          border-radius: 5px;
+        }
+        #feedback:focus,
+        #name:focus,
+        #course:focus {
+          border-color: blue; 
+          outline: none;         
+        }
+        button{
+          background-color: rgb(60, 107, 235);
+          border:none;
+          height: 30px;
+          border-radius: 5px;
+        }
+        #rating{
+          accent-color: rgb(60, 107, 235);
+        }
+        .q{
+          display: flex;
+          flex-wrap: wrap;
+          background-color: rgb(189, 207, 144);
+          border-radius: 5px;
+          margin: 10px;
+          width: 200px;
+          padding: 10px;
+        }
+        #output{
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 10px;
+          padding: 20px;
+        }
+    </style>
+    <script src="Project3.js" defer></script>
+  </head>
+  <body>
+    <h2>Student Feedback Form</h2>
+    <form id="feedbackForm">
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <select id="course" required>
+        <option value="">Select Course</option>
+        <option>HTML & CSS</option>
+        <option>JavaScript</option>
+        <option>React JS</option>
+        <option>Node JS</option>
+      </select>
+
+      <label>Rating (1 to 5):</label>
+      <input type="range" id="rating" min="1" max="5" value="3" />
+
+      <textarea
+        id="feedback"
+        placeholder="Write your feedback..."
+        required
+      ></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+
+    <div id="output"></div>
+  </body>
+</html>
