@@ -37,4 +37,12 @@ h1{
     border: 5px solid purple;
 }
 
-
+.fix{
+    bottom: 20px;
+    right: 30px;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(77, 77, 215);
+    color: black;
+   
+}

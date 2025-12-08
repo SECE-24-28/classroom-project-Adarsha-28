@@ -72,9 +72,38 @@ let c = books.filter((el)=>{
     },0);
 console.log("3.Total price: ",c);
 
-let d = 
+let d = books.filter((el)=>{
+  return el.category === "Design";
+});
+let d1 = d.reduce((acc,el)=>{
+  return acc+= el.pages;
+},0);
+let d2 = d1/d.length;
+console.log("4.Average pages: ",d2);
 
-// let g = books.filter((el)=>{
-//     return el.pages>300 && el.price<500;
-// }).map((el)=>el.bookName);
-// console.log("7.Page and price:",g);
+let e = books.filter((el)=>{
+  return el.rating < 4.0;
+}).map((el)=> el.author);
+console.log("5.Authors less than 4.0 rating: ",e);
+
+let f = books.reduce((prev,current)=>{
+  return (current.price > prev.price)?current:prev;
+}).bookName;
+console.log("6.Most Expensive Book: ",f);
+
+let g = books.filter((el)=>{
+    return el.pages>300 && el.price<500;
+}).map((el)=>el.bookName);
+console.log("7.Page and price:",g);
+
+// let h = books.map((el)=> {return {bookName: el.bookName,author : el.author};});
+// console.log(h);
+
+const nameAuthorArray = books.map(book => {
+    return {
+        name: book.bookName,
+        author: book.author
+    };
+});
+
+console.log(nameAuthorArray);
